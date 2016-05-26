@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C292D6511CF552F400F53B7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6501CF552F400F53B7F /* main.m */; };
+		C292D6541CF552F400F53B7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6531CF552F400F53B7F /* AppDelegate.m */; };
+		C292D6571CF552F400F53B7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6561CF552F400F53B7F /* ViewController.m */; };
+		C292D65A1CF552F400F53B7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C292D6581CF552F400F53B7F /* Main.storyboard */; };
+		C292D65C1CF552F400F53B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C292D65B1CF552F400F53B7F /* Assets.xcassets */; };
+		C292D65F1CF552F400F53B7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C292D65D1CF552F400F53B7F /* LaunchScreen.storyboard */; };
+		C292D66A1CF552F500F53B7F /* YUNCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6691CF552F500F53B7F /* YUNCalendarTests.m */; };
+		C292D6781CF553A400F53B7F /* NSDate+YUNCalendarAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6771CF553A400F53B7F /* NSDate+YUNCalendarAdditions.m */; };
+		C292D67A1CF557AD00F53B7F /* NSDateCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6791CF557AD00F53B7F /* NSDateCategoryTest.m */; };
+		C292D67F1CF5652B00F53B7F /* YUNCalendarDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D67E1CF5652B00F53B7F /* YUNCalendarDayModel.m */; };
+		C292D6821CF5778600F53B7F /* YUNCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6811CF5778600F53B7F /* YUNCalendarView.m */; };
+		C292D6851CF586CE00F53B7F /* YUNCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6841CF586CE00F53B7F /* YUNCalendarCell.m */; };
+		C292D6881CF58D8400F53B7F /* YUNCalendarMonthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6871CF58D8400F53B7F /* YUNCalendarMonthModel.m */; };
+		C292D68A1CF5981000F53B7F /* YUNCalendarMonthTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C292D6891CF5981000F53B7F /* YUNCalendarMonthTest.m */; };
+		C2A1ECC51CF6A403005356D5 /* NSDateFormatter+YUNCalendarAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A1ECC41CF6A403005356D5 /* NSDateFormatter+YUNCalendarAdditions.m */; };
+		C2A1ECC91CF6A8DE005356D5 /* YUNPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A1ECC81CF6A8DE005356D5 /* YUNPopView.m */; };
+		C2A1ECCC1CF6A933005356D5 /* YUNPopCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A1ECCB1CF6A933005356D5 /* YUNPopCalendarView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C292D6661CF552F500F53B7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C292D6441CF552F400F53B7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C292D64B1CF552F400F53B7F;
+			remoteInfo = YUNCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C292D64C1CF552F400F53B7F /* YUNCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YUNCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C292D6501CF552F400F53B7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C292D6521CF552F400F53B7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C292D6531CF552F400F53B7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C292D6551CF552F400F53B7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C292D6561CF552F400F53B7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C292D6591CF552F400F53B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C292D65B1CF552F400F53B7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C292D65E1CF552F400F53B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C292D6601CF552F400F53B7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C292D6651CF552F500F53B7F /* YUNCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YUNCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C292D6691CF552F500F53B7F /* YUNCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUNCalendarTests.m; sourceTree = "<group>"; };
+		C292D66B1CF552F500F53B7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C292D6761CF553A400F53B7F /* NSDate+YUNCalendarAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YUNCalendarAdditions.h"; sourceTree = "<group>"; };
+		C292D6771CF553A400F53B7F /* NSDate+YUNCalendarAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YUNCalendarAdditions.m"; sourceTree = "<group>"; };
+		C292D6791CF557AD00F53B7F /* NSDateCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateCategoryTest.m; sourceTree = "<group>"; };
+		C292D67D1CF5652B00F53B7F /* YUNCalendarDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNCalendarDayModel.h; sourceTree = "<group>"; };
+		C292D67E1CF5652B00F53B7F /* YUNCalendarDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNCalendarDayModel.m; sourceTree = "<group>"; };
+		C292D6801CF5778600F53B7F /* YUNCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNCalendarView.h; sourceTree = "<group>"; };
+		C292D6811CF5778600F53B7F /* YUNCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNCalendarView.m; sourceTree = "<group>"; };
+		C292D6831CF586CE00F53B7F /* YUNCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNCalendarCell.h; sourceTree = "<group>"; };
+		C292D6841CF586CE00F53B7F /* YUNCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNCalendarCell.m; sourceTree = "<group>"; };
+		C292D6861CF58D8400F53B7F /* YUNCalendarMonthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNCalendarMonthModel.h; sourceTree = "<group>"; };
+		C292D6871CF58D8400F53B7F /* YUNCalendarMonthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNCalendarMonthModel.m; sourceTree = "<group>"; };
+		C292D6891CF5981000F53B7F /* YUNCalendarMonthTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNCalendarMonthTest.m; sourceTree = "<group>"; };
+		C2A1ECC31CF6A403005356D5 /* NSDateFormatter+YUNCalendarAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+YUNCalendarAdditions.h"; sourceTree = "<group>"; };
+		C2A1ECC41CF6A403005356D5 /* NSDateFormatter+YUNCalendarAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+YUNCalendarAdditions.m"; sourceTree = "<group>"; };
+		C2A1ECC71CF6A8DE005356D5 /* YUNPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNPopView.h; sourceTree = "<group>"; };
+		C2A1ECC81CF6A8DE005356D5 /* YUNPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNPopView.m; sourceTree = "<group>"; };
+		C2A1ECCA1CF6A933005356D5 /* YUNPopCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNPopCalendarView.h; sourceTree = "<group>"; };
+		C2A1ECCB1CF6A933005356D5 /* YUNPopCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNPopCalendarView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C292D6491CF552F400F53B7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C292D6621CF552F500F53B7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C292D6431CF552F400F53B7F = {
+			isa = PBXGroup;
+			children = (
+				C292D64E1CF552F400F53B7F /* YUNCalendar */,
+				C292D6681CF552F500F53B7F /* YUNCalendarTests */,
+				C292D64D1CF552F400F53B7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C292D64D1CF552F400F53B7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C292D64C1CF552F400F53B7F /* YUNCalendar.app */,
+				C292D6651CF552F500F53B7F /* YUNCalendarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C292D64E1CF552F400F53B7F /* YUNCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				C292D6521CF552F400F53B7F /* AppDelegate.h */,
+				C292D6531CF552F400F53B7F /* AppDelegate.m */,
+				C292D6551CF552F400F53B7F /* ViewController.h */,
+				C292D6561CF552F400F53B7F /* ViewController.m */,
+				C2A1ECC71CF6A8DE005356D5 /* YUNPopView.h */,
+				C2A1ECC81CF6A8DE005356D5 /* YUNPopView.m */,
+				C2A1ECCA1CF6A933005356D5 /* YUNPopCalendarView.h */,
+				C2A1ECCB1CF6A933005356D5 /* YUNPopCalendarView.m */,
+				C292D6751CF5535E00F53B7F /* YUNCalendar */,
+				C292D6581CF552F400F53B7F /* Main.storyboard */,
+				C292D65B1CF552F400F53B7F /* Assets.xcassets */,
+				C292D65D1CF552F400F53B7F /* LaunchScreen.storyboard */,
+				C292D6601CF552F400F53B7F /* Info.plist */,
+				C292D64F1CF552F400F53B7F /* Supporting Files */,
+			);
+			path = YUNCalendar;
+			sourceTree = "<group>";
+		};
+		C292D64F1CF552F400F53B7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C292D6501CF552F400F53B7F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C292D6681CF552F500F53B7F /* YUNCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				C292D6691CF552F500F53B7F /* YUNCalendarTests.m */,
+				C292D6891CF5981000F53B7F /* YUNCalendarMonthTest.m */,
+				C292D6791CF557AD00F53B7F /* NSDateCategoryTest.m */,
+				C292D66B1CF552F500F53B7F /* Info.plist */,
+			);
+			path = YUNCalendarTests;
+			sourceTree = "<group>";
+		};
+		C292D6751CF5535E00F53B7F /* YUNCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				C292D6761CF553A400F53B7F /* NSDate+YUNCalendarAdditions.h */,
+				C292D6771CF553A400F53B7F /* NSDate+YUNCalendarAdditions.m */,
+				C2A1ECC31CF6A403005356D5 /* NSDateFormatter+YUNCalendarAdditions.h */,
+				C2A1ECC41CF6A403005356D5 /* NSDateFormatter+YUNCalendarAdditions.m */,
+				C292D67D1CF5652B00F53B7F /* YUNCalendarDayModel.h */,
+				C292D67E1CF5652B00F53B7F /* YUNCalendarDayModel.m */,
+				C292D6861CF58D8400F53B7F /* YUNCalendarMonthModel.h */,
+				C292D6871CF58D8400F53B7F /* YUNCalendarMonthModel.m */,
+				C292D6801CF5778600F53B7F /* YUNCalendarView.h */,
+				C292D6811CF5778600F53B7F /* YUNCalendarView.m */,
+				C292D6831CF586CE00F53B7F /* YUNCalendarCell.h */,
+				C292D6841CF586CE00F53B7F /* YUNCalendarCell.m */,
+			);
+			path = YUNCalendar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C292D64B1CF552F400F53B7F /* YUNCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C292D66E1CF552F500F53B7F /* Build configuration list for PBXNativeTarget "YUNCalendar" */;
+			buildPhases = (
+				C292D6481CF552F400F53B7F /* Sources */,
+				C292D6491CF552F400F53B7F /* Frameworks */,
+				C292D64A1CF552F400F53B7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YUNCalendar;
+			productName = YUNCalendar;
+			productReference = C292D64C1CF552F400F53B7F /* YUNCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C292D6641CF552F500F53B7F /* YUNCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C292D6711CF552F500F53B7F /* Build configuration list for PBXNativeTarget "YUNCalendarTests" */;
+			buildPhases = (
+				C292D6611CF552F500F53B7F /* Sources */,
+				C292D6621CF552F500F53B7F /* Frameworks */,
+				C292D6631CF552F500F53B7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C292D6671CF552F500F53B7F /* PBXTargetDependency */,
+			);
+			name = YUNCalendarTests;
+			productName = YUNCalendarTests;
+			productReference = C292D6651CF552F500F53B7F /* YUNCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C292D6441CF552F400F53B7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = yun11yun;
+				TargetAttributes = {
+					C292D64B1CF552F400F53B7F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C292D6641CF552F500F53B7F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C292D64B1CF552F400F53B7F;
+					};
+				};
+			};
+			buildConfigurationList = C292D6471CF552F400F53B7F /* Build configuration list for PBXProject "YUNCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C292D6431CF552F400F53B7F;
+			productRefGroup = C292D64D1CF552F400F53B7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C292D64B1CF552F400F53B7F /* YUNCalendar */,
+				C292D6641CF552F500F53B7F /* YUNCalendarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C292D64A1CF552F400F53B7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C292D65F1CF552F400F53B7F /* LaunchScreen.storyboard in Resources */,
+				C292D65C1CF552F400F53B7F /* Assets.xcassets in Resources */,
+				C292D65A1CF552F400F53B7F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C292D6631CF552F500F53B7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C292D6481CF552F400F53B7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C292D6571CF552F400F53B7F /* ViewController.m in Sources */,
+				C2A1ECC51CF6A403005356D5 /* NSDateFormatter+YUNCalendarAdditions.m in Sources */,
+				C292D6821CF5778600F53B7F /* YUNCalendarView.m in Sources */,
+				C292D6541CF552F400F53B7F /* AppDelegate.m in Sources */,
+				C292D67F1CF5652B00F53B7F /* YUNCalendarDayModel.m in Sources */,
+				C2A1ECCC1CF6A933005356D5 /* YUNPopCalendarView.m in Sources */,
+				C2A1ECC91CF6A8DE005356D5 /* YUNPopView.m in Sources */,
+				C292D6511CF552F400F53B7F /* main.m in Sources */,
+				C292D6781CF553A400F53B7F /* NSDate+YUNCalendarAdditions.m in Sources */,
+				C292D6851CF586CE00F53B7F /* YUNCalendarCell.m in Sources */,
+				C292D6881CF58D8400F53B7F /* YUNCalendarMonthModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C292D6611CF552F500F53B7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C292D67A1CF557AD00F53B7F /* NSDateCategoryTest.m in Sources */,
+				C292D68A1CF5981000F53B7F /* YUNCalendarMonthTest.m in Sources */,
+				C292D66A1CF552F500F53B7F /* YUNCalendarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C292D6671CF552F500F53B7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C292D64B1CF552F400F53B7F /* YUNCalendar */;
+			targetProxy = C292D6661CF552F500F53B7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C292D6581CF552F400F53B7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C292D6591CF552F400F53B7F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C292D65D1CF552F400F53B7F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C292D65E1CF552F400F53B7F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C292D66C1CF552F500F53B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C292D66D1CF552F500F53B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C292D66F1CF552F500F53B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YUNCalendar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yun11yun.YUNCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C292D6701CF552F500F53B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YUNCalendar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yun11yun.YUNCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C292D6721CF552F500F53B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YUNCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yun11yun.YUNCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YUNCalendar.app/YUNCalendar";
+			};
+			name = Debug;
+		};
+		C292D6731CF552F500F53B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YUNCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yun11yun.YUNCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YUNCalendar.app/YUNCalendar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C292D6471CF552F400F53B7F /* Build configuration list for PBXProject "YUNCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C292D66C1CF552F500F53B7F /* Debug */,
+				C292D66D1CF552F500F53B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C292D66E1CF552F500F53B7F /* Build configuration list for PBXNativeTarget "YUNCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C292D66F1CF552F500F53B7F /* Debug */,
+				C292D6701CF552F500F53B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C292D6711CF552F500F53B7F /* Build configuration list for PBXNativeTarget "YUNCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C292D6721CF552F500F53B7F /* Debug */,
+				C292D6731CF552F500F53B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C292D6441CF552F400F53B7F /* Project object */;
+}
