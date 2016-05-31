@@ -37,7 +37,7 @@ static NSString * const kCalendarCellIdentifier = @"calendarCell";
 
 @implementation YUNCalendarView
 {
-    NSMutableArray *_selectDates;
+    NSMutableArray *_selectedDates;
 }
 
 #pragma mark - Lifecycle
@@ -69,7 +69,8 @@ static NSString * const kCalendarCellIdentifier = @"calendarCell";
 {
     _interval = 0;
     _maxInterval = 4;
-    _selectDates = [NSMutableArray array];
+    _selectedDates = [NSMutableArray array];
+    _calendarUserInteractionEnabled = YES;
     _originMonthModel = [[YUNCalendarMonthModel alloc] initWithDate:[NSDate date]];
     _currentMonthModel = [_originMonthModel calendarMonthModelWithInterval:_interval];
     
@@ -168,7 +169,13 @@ static NSString * const kCalendarCellIdentifier = @"calendarCell";
     cell.layer.borderColor = [UIColor colorWithWhite:0.0 alpha:0.1].CGColor;
     cell.layer.borderWidth = 1.0f;
     cell.model = _currentMonthModel.dayModels[indexPath.row];
-    
+    cell.selectedColor = self.selectedColor;
+    cell.dimmedColor = self.dimmedColor;
+    cell.selectedImage = self.selectedImage;
+    cell.dimmedImage = self.dimmedImage;
+    if (self.calendarUserInteractionEnabled == NO) {
+        self.userInteractionEnabled = NO;
+    }
     return cell;
 }
 
@@ -180,14 +187,14 @@ static NSString * const kCalendarCellIdentifier = @"calendarCell";
     dayModel.selected = !dayModel.selected;
     
     if (dayModel.selected == YES) {
-        [_selectDates addObject:[dayModel toString]];
+        [_selectedDates addObject:[dayModel toString]];
     } else {
-        [_selectDates removeObject:[dayModel toString]];
+        [_selectedDates removeObject:[dayModel toString]];
     }
     [collectionView reloadItemsAtIndexPaths:@[indexPath]];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(calendarView:didSelectedDates:)]) {
-        [self.delegate calendarView:self didSelectedDates:[self.selectDates copy]];
+        [self.delegate calendarView:self didSelectedDates:[self.selectedDates copy]];
     }
 }
 
@@ -201,10 +208,46 @@ static NSString * const kCalendarCellIdentifier = @"calendarCell";
 
 #pragma mark - Properties
 
-- (void)setSelectDates:(NSArray *)selectDates
+- (void)setDimmedDates:(NSArray *)dimmedDates
 {
-    _selectDates = [selectDates mutableCopy];
+    _dimmedDates = dimmedDates;
     [self reloadData];
+}
+
+- (void)setSelectedDates:(NSArray *)selectedDates
+{
+    _selectedDates = [selectedDates mutableCopy];
+    [self reloadData];
+}
+
+- (void)setCalendarUserInteractionEnabled:(BOOL)calendarUserInteractionEnabled
+{
+    _calendarUserInteractionEnabled = calendarUserInteractionEnabled;
+    [self.collectionView reloadData];
+}
+
+- (void)setSelectedColor:(UIColor *)selectedColor
+{
+    _selectedColor =selectedColor;
+    [self.collectionView reloadData];
+}
+
+- (void)setDimmedColor:(UIColor *)dimmedColor
+{
+    _dimmedColor = dimmedColor;
+    [self.collectionView reloadData];
+}
+
+- (void)setSelectedImage:(UIImage *)selectedImage
+{
+    _selectedImage = selectedImage;
+    [self.collectionView reloadData];
+}
+
+- (void)setDimmedImage:(UIImage *)dimmedImage
+{
+    _dimmedImage = dimmedImage;
+    [self.collectionView reloadData];
 }
 
 #pragma mark - Action
@@ -258,13 +301,13 @@ static NSString * const kCalendarCellIdentifier = @"calendarCell";
     NSDateFormatter *dateFormatter = [NSDateFormatter yun_dateFormatter];
     
     for (YUNCalendarDayModel *dayModel in _currentMonthModel.dayModels) {
-        for (NSString *dateString in self.selectDates) {
+        for (NSString *dateString in self.selectedDates) {
             NSDate *date = [dateFormatter dateFromString:dateString];
             if ([date isEqualToDate:[dayModel date]]) {
                 dayModel.selected = YES;
             }
         }
-        for (NSString *dateString in self.notOptionalDates) {
+        for (NSString *dateString in self.dimmedDates) {
             NSDate *date = [dateFormatter dateFromString:dateString];
             if ([date isEqualToDate:[dayModel date]]) {
                 dayModel.optional = NO;

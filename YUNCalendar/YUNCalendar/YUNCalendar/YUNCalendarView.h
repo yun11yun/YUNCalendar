@@ -11,14 +11,49 @@
 @protocol YUNCalendarViewDelegate;
 
 @interface YUNCalendarView : UIView
-
+/**
+ *  设置可见的月数，默认为3，
+ */
 @property (nonatomic, assign) NSUInteger maxInterval;
 
-@property (nonatomic, strong) NSArray *notOptionalDates;
+/**
+ *  已被选择的日期
+ */
+@property (nonatomic, strong) NSArray *selectedDates;
 
-@property (nonatomic, strong) NSArray *selectDates;
+/**
+ *  不可选择的日期
+ */
+@property (nonatomic, strong) NSArray *dimmedDates;
+
+/**
+ *  日历是否可选， 默认为YES;
+ */
+@property (nonatomic, assign) BOOL calendarUserInteractionEnabled;
+
+/**
+ *  日期被选中时的颜色
+ */
+@property (nonatomic, strong) UIColor *selectedColor;
+
+/**
+ *  不可选的日期显示的颜色
+ */
+@property (nonatomic, strong) UIColor *dimmedColor;
+
+/**
+ *  日期被选择是显示的图片
+ */
+@property (nonatomic, strong) UIImage *selectedImage;
+
+/**
+ *  不可选的日期显示的图片
+ */
+@property (nonatomic, strong) UIImage *dimmedImage;
+
 
 @property (nonatomic, weak) id<YUNCalendarViewDelegate> delegate;
+
 
 + (CGFloat)viewHeightWithWidth:(CGFloat)width;
 

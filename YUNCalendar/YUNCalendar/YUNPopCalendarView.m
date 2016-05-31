@@ -29,6 +29,7 @@ static const CGFloat kBottomHeight = 40;
     self = [super initWithContentSize:contentSize];
     if (self) {
         _calendarView = [[YUNCalendarView alloc] initWithFrame:CGRectMake(0, 0, self.contentSize.width, calendarHeight)];
+        _calendarView.selectedColor = [UIColor blueColor];
         _calendarView.delegate = self;
         [self.contentView addSubview:_calendarView];
         
@@ -59,7 +60,7 @@ static const CGFloat kBottomHeight = 40;
 - (void)confirmButtonClicked:(UIButton *)sender
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(popCalendarView:didSelectedDates:)]) {
-        [self.delegate popCalendarView:self didSelectedDates:self.selectDates];
+        [self.delegate popCalendarView:self didSelectedDates:self.selectedDates];
     }
 }
 
@@ -68,28 +69,28 @@ static const CGFloat kBottomHeight = 40;
 - (void)calendarView:(YUNCalendarView *)calendarView didSelectedDates:(NSArray *)dateArray
 {
     if (dateArray && dateArray.count != 0) {
-        self.selectDates = dateArray;
+        self.selectedDates = dateArray;
     }
 }
 
 #pragma mark - Properties
 
-- (void)setNotOptionalDates:(NSArray *)notOptionalDates
+- (void)setSelectedDates:(NSArray *)selectedDates
 {
-    _notOptionalDates = notOptionalDates;
-    _calendarView.notOptionalDates = notOptionalDates;
-}
-
-- (void)setSelectDates:(NSArray *)selectDates
-{
-    _selectDates = selectDates;
-    _calendarView.selectDates = selectDates;
+    _selectedDates = selectedDates;
+    _calendarView.selectedDates = selectedDates;
 }
 
 - (void)setMaxInterval:(NSUInteger)maxInterval
 {
     _maxInterval = maxInterval;
     _calendarView.maxInterval = maxInterval;
+}
+
+- (void)setCalendarUserInteractionEnabled:(BOOL)calendarUserInteractionEnabled
+{
+    _calendarUserInteractionEnabled = calendarUserInteractionEnabled;
+    _calendarView.calendarUserInteractionEnabled = calendarUserInteractionEnabled;
 }
 
 #pragma mark- Helper methods

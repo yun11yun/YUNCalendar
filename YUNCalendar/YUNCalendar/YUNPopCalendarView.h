@@ -14,11 +14,16 @@
 
 @property (nonatomic, assign) NSUInteger maxInterval;
 
-@property (nonatomic, strong) NSArray *notOptionalDates;
+@property (nonatomic, strong) NSArray *dimmedDates;
 
-@property (nonatomic, strong) NSArray *selectDates;
+@property (nonatomic, strong) NSArray *selectedDates;
 
 @property (nonatomic, weak) id<YUNPopCalendarViewDelegate> delegate;
+
+/**
+ *  日历是否可选， 默认为YES;
+ */
+@property (nonatomic, assign) BOOL calendarUserInteractionEnabled;
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 
